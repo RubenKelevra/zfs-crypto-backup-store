@@ -19,7 +19,7 @@ sudo zfs set compression=gzip-9 backupstore/root
 sudo zfs set dedup=on           backupstore/root
 sudo zfs set sync=disabled      backupstore/root
 
-sudo rsync -qaAXv --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home/*/.cache/*","/home/*/Downloads/*","/home/*/tmp/*","/backup_store","/home/*/.claws-mail/imapcache/*","/var/cache/pacman/pkg/*","/var/log/journal/*/.*"} /* /backupstore/root/
+sudo rsync -qaAXv --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home/*/.cache/*","/home/*/Downloads/*","/home/*/tmp/*","/backupstore","/home/*/.claws-mail/imapcache/*","/var/cache/pacman/pkg/*","/var/log/journal/*/.*"} /* /backupstore/root/
 sudo zfs set sync=standard       backupstore/root
 sudo sync
 

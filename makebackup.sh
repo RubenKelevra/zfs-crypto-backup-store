@@ -33,6 +33,7 @@ read -p "halting, if you want to destroy a snapshot, do it now, then press ENTER
 echo "unmounting and closing luks..."
 
 sudo zfs umount /backupstore || sudo zfs umount -f /backupstore || true
+sudo zpool export -f backupstore
 sudo cryptsetup luksClose backup 
 sudo eject $DEVICE
 
